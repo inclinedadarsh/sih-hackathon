@@ -18,3 +18,12 @@ export type marketItem = {
 };
 
 export type marketItems = marketItem[];
+
+type guide = {
+    name: string;
+    id: string;
+    phone: number;
+    speciality: "Adventure" | "History" | "Nature" | "Religious";
+};
+
+export type guides = guide[];
