@@ -1,4 +1,4 @@
-import { homeCards } from "@/types";
+import { homeCards, marketItems } from "@/types";
 
 import {
     BedDouble,
@@ -51,5 +51,43 @@ export const HOME_CARDS: homeCards = [
             "Delve into the history, culture, and natural wonders of Goda Park, discovering the essence that makes this destination a unique and cherished haven.",
         url: "/about",
         icon: FileText,
+    },
+];
+
+export const MARKET_ITEMS: marketItems = [
+    {
+        title: "Misal Pav",
+        price: 120,
+        tag: "Food",
+        id: "F20241",
+        quantity: 0,
+    },
+    {
+        title: "Toy Gun & Bullets",
+        price: 80,
+        tag: "Souvenir",
+        id: "S20241",
+        quantity: 0,
+    },
+    {
+        title: "Dolo 650",
+        price: 45,
+        tag: "Medicine",
+        id: "M20241",
+        quantity: 0,
+    },
+    {
+        title: "Bottle of Water",
+        price: 20,
+        tag: "Food",
+        id: "F20242",
+        quantity: 0,
+    },
+    {
+        title: "Paracetamol",
+        price: 60,
+        tag: "Medicine",
+        id: "M20242",
+        quantity: 0,
     },
 ];
