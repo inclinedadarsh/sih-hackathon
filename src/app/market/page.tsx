@@ -24,6 +24,7 @@ import {
 import { MARKET_ITEMS } from "@/constants";
 import { Plus, ArrowRight } from "lucide-react";
 import { marketItem, marketItems } from "@/types";
+import BuyProduct from "@/components/razorpay/BuyProduct";
 
 const page = () => {
     const [cart, setCart] = useState<marketItems>([]);
@@ -158,41 +159,7 @@ const page = () => {
                             </TableCell>
                             <TableCell></TableCell>
                             <TableCell>
-                                <Dialog>
-                                    <DialogTrigger asChild>
-                                        <Button className='ml-auto flex gap-2 items-center'>
-                                            Proceed to checkout{" "}
-                                            <ArrowRight size={18} />
-                                        </Button>
-                                    </DialogTrigger>
-                                    <DialogContent>
-                                        <DialogHeader>
-                                            <DialogTitle>
-                                                Thank you!
-                                            </DialogTitle>
-                                            <DialogDescription>
-                                                Your order has been placed
-                                                successfully. Here are the
-                                                details:
-                                            </DialogDescription>
-                                        </DialogHeader>
-                                        <div className='flex gap-5'>
-                                            <span className=''>
-                                                Order ID: {generateRandomId()}
-                                            </span>
-                                            <span className=''>
-                                                Amount:{" "}
-                                                {cart.reduce((total, item) => {
-                                                    return (
-                                                        total +
-                                                        item.price *
-                                                            item.quantity
-                                                    );
-                                                }, 0)}
-                                            </span>
-                                        </div>
-                                    </DialogContent>
-                                </Dialog>
+                                <BuyProduct />
                             </TableCell>
                         </TableRow>
                     </TableBody>
