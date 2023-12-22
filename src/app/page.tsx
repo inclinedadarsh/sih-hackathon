@@ -13,38 +13,28 @@ import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 import { HOME_CARDS } from "@/constants";
+import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className='view-container'>
-            <h1 className='text-3xl lg:text-4xl my-8 font-semibold'>
-                Welcome to Goda Park 👋
-            </h1>
-            <p className='max-w-2xl'>
-                Welcome to Goda Park—a haven for tourists! Our project aims to
-                enhance your visit with valuable resources and assistance,
-                ensuring a memorable experience amidst the beauty of this
-                enchanting destination.
-            </p>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 my-14'>
+        <div className='view-container min-h-screen flex justify-center items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 my-14 h-fit'>
                 {HOME_CARDS.map((card) => (
-                    <Card key={card.title}>
+                    <Card key={card.title} className='max-w-[360px]'>
                         <CardHeader>
-                            <CardTitle className='flex gap-2 items-center text-lg'>
+                            <CardTitle className='flex gap-2 items-center mx-auto text-lg'>
                                 {<card.icon />} {card.title}
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p>{card.description}</p>
-                        </CardContent>
-                        <CardFooter>
-                            <Link
-                                href={`${card.url}`}
-                                className={buttonVariants()}
-                            >
-                                Check out <ArrowRight />
+                            <Link href={card.url}>
+                                <Image
+                                    src={card.image}
+                                    alt={card.title}
+                                    className='w-full aspect-square object-cover'
+                                />
                             </Link>
-                        </CardFooter>
+                        </CardContent>
                     </Card>
                 ))}
             </div>

@@ -1,8 +1,9 @@
 import { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 
 type homeCard = {
     title: string;
-    description: string;
+    image: StaticImageData;
     url: string;
     icon: LucideIcon;
 };
