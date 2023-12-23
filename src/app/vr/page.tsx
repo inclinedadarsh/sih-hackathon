@@ -15,11 +15,12 @@ const page = () => {
     return (
         <div className='view-container'>
             <h1 className='text-4xl md:text-6xl my-10 font-semibold'>
-                Market - Food & Souvenirs
+                Virtual Reality
             </h1>
             <p className='max-w-4xl text-3xl leading-relaxed mb-8'>
-                Explore local markets and shops within Goda Park, offering a
-                variety of food and souvenirs to enrich your experience.
+                Explore local tourist attractions with our virtual reality
+                experience. You can view these places in VR with our occulus
+                headsets.
             </p>
             <div className=''>
                 <Table className='table'>

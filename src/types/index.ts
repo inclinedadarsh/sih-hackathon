@@ -41,3 +41,11 @@ export type vrPlace = {
 };
 
 export type vrPlaces = vrPlace[];
+
+export type hotel = {
+    name: string;
+    image: StaticImageData;
+    rating: number;
+};
+
+export type hotels = hotel[];

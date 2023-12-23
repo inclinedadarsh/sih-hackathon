@@ -15,6 +15,9 @@ import tape3 from "./tape3.png";
 import godaImage1 from "./goda1.jpeg";
 import godaImage2 from "./goda2.jpeg";
 import godaImage3 from "./goda3.jpeg";
+import hotel1 from "./hotel1.jpeg";
+import hotel2 from "./hotel2.jpeg";
+import hotel3 from "./hotel3.png";
 
 export {
     hotelImage,
@@ -34,4 +37,7 @@ export {
     godaImage1,
     godaImage2,
     godaImage3,
+    hotel1,
+    hotel2,
+    hotel3,
 };

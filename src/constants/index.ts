@@ -1,4 +1,4 @@
-import { guides, homeCards, marketItems, vrPlaces } from "@/types";
+import { guides, homeCards, hotels, marketItems, vrPlaces } from "@/types";
 
 import {
     BedDouble,
@@ -21,6 +21,9 @@ import {
     guide3,
     guide4,
     guide5,
+    hotel1,
+    hotel2,
+    hotel3,
 } from "@/assets";
 
 export const HOME_CARDS: homeCards = [
@@ -178,5 +181,23 @@ export const VR: vrPlaces = [
         name: "Trimbakeshwar",
         city: "Nashik",
         type: "Religious",
+    },
+];
+
+export const HOTELS: hotels = [
+    {
+        name: "Express Inn",
+        image: hotel1,
+        rating: 4.5,
+    },
+    {
+        name: "IBIS",
+        image: hotel2,
+        rating: 4,
+    },
+    {
+        name: "Ginger",
+        image: hotel3,
+        rating: 3.5,
     },
 ];
