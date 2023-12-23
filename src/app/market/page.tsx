@@ -15,14 +15,13 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
 
 import { MARKET_ITEMS } from "@/constants";
-import { Plus, ArrowRight } from "lucide-react";
+import { Plus, ArrowRight, Pizza, Shapes, Pill } from "lucide-react";
 import { marketItem, marketItems } from "@/types";
 
 const page = () => {
@@ -73,18 +72,15 @@ const page = () => {
 
     return (
         <div className='view-container'>
-            <h1 className='text-3xl lg:text-4xl my-8 font-semibold'>
+            <h1 className='text-4xl md:text-6xl my-10 font-semibold'>
                 Market - Food & Souvenirs
             </h1>
-            <p className='max-w-2xl'>
+            <p className='max-w-4xl text-3xl leading-relaxed mb-8'>
                 Explore local markets and shops within Goda Park, offering a
                 variety of food and souvenirs to enrich your experience.
             </p>
             <div className=''>
-                <h2 className='text-2xl font-medium my-14 mb-7'>
-                    Select items from cart
-                </h2>
-                <Table>
+                <Table className='table'>
                     <TableHeader>
                         <TableHead>ID</TableHead>
                         <TableHead>Item name</TableHead>
@@ -93,14 +89,26 @@ const page = () => {
                     </TableHeader>
                     <TableBody>
                         {MARKET_ITEMS.map((item, index) => (
-                            <TableRow key={index}>
+                            <TableRow key={index} className='border-blue-500'>
                                 <TableCell>{item.id}</TableCell>
                                 <TableCell className='font-medium text-lg'>
                                     {item.title}
                                 </TableCell>
                                 <TableCell>
-                                    <span className='text-sm border rounded-sm py-1 px-2'>
-                                        {item.tag}
+                                    <span className='text-sm border rounded-full bg-white py-1 px-2 flex gap-1 items-center w-fit'>
+                                        {item.tag == "Food" ? (
+                                            <>
+                                                <Pizza size={16} /> Food
+                                            </>
+                                        ) : item.tag == "Souvenir" ? (
+                                            <>
+                                                <Shapes size={16} /> Souvenir
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Pill size={16} /> Medicine
+                                            </>
+                                        )}
                                     </span>
                                 </TableCell>
                                 <TableCell className='font-medium'>
@@ -108,9 +116,7 @@ const page = () => {
                                 </TableCell>
                                 <TableCell>
                                     <Button
-                                        className='ml-auto flex gap-2 items-center'
-                                        variant='outline'
-                                        size='sm'
+                                        className='ml-auto flex gap-2 items-center bg-green-500 text-white hover:bg-green-800'
                                         onClick={() => {
                                             addToCart(item);
                                         }}
@@ -125,14 +131,14 @@ const page = () => {
             </div>
             <div className=''>
                 <h2 className='text-2xl font-medium my-14 mb-7'>Your cart</h2>
-                <Table>
+                <Table className='cart'>
                     <TableHeader>
                         <TableHead>Item name</TableHead>
                         <TableHead>Item price</TableHead>
                         <TableHead>Quantity</TableHead>
                         <TableHead>Total price</TableHead>
                     </TableHeader>
-                    <TableBody>
+                    <TableBody className='table-body'>
                         {cart.map((item, index) => (
                             <TableRow key={index}>
                                 <TableCell className='text-lg font-medium'>
@@ -160,7 +166,7 @@ const page = () => {
                             <TableCell>
                                 <Dialog>
                                     <DialogTrigger asChild>
-                                        <Button className='ml-auto flex gap-2 items-center'>
+                                        <Button className='ml-auto flex gap-2 items-center bg-white text-black hover:bg-blue-100'>
                                             Proceed to checkout{" "}
                                             <ArrowRight size={18} />
                                         </Button>
