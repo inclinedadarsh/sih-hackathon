@@ -1,4 +1,4 @@
-import { guides, homeCards, marketItems } from "@/types";
+import { guides, homeCards, marketItems, vrPlaces } from "@/types";
 
 import {
     BedDouble,
@@ -13,7 +13,7 @@ import {
     guideImage,
     hotelImage,
     infoImage,
-    mapImage,
+    VRImage,
     supplementsImage,
     travelImage,
     guide1,
@@ -31,10 +31,10 @@ export const HOME_CARDS: homeCards = [
         image: hotelImage,
     },
     {
-        title: "Map",
-        url: "/map",
+        title: "Virtual Reality",
+        url: "/vr",
         icon: MapPin,
-        image: mapImage,
+        image: VRImage,
     },
     {
         title: "Travel & Transit Ease",
@@ -155,5 +155,28 @@ export const GUIDE: guides = [
         numOfTours: 7,
         rating: 4,
         language: "Hindi",
+    },
+];
+
+export const VR: vrPlaces = [
+    {
+        name: "Goda Park",
+        city: "Nashik",
+        type: "Picnic",
+    },
+    {
+        name: "Ajanta Caves",
+        city: "Aurangabad",
+        type: "Historical",
+    },
+    {
+        name: "Balaji Temples",
+        city: "Nashik",
+        type: "Religious",
+    },
+    {
+        name: "Trimbakeshwar",
+        city: "Nashik",
+        type: "Religious",
     },
 ];

@@ -33,3 +33,11 @@ export type guide = {
 };
 
 export type guides = guide[];
+
+export type vrPlace = {
+    name: string;
+    city: string;
+    type: "Religious" | "Picnic" | "Historical";
+};
+
+export type vrPlaces = vrPlace[];

@@ -1,7 +1,6 @@
 import hotelImage from "./hotels.png";
 import guideImage from "./guide.png";
 import infoImage from "./info.png";
-import mapImage from "./map.png";
 import travelImage from "./travel.png";
 import supplementsImage from "./supplements.png";
 import VRImage from "./vr.png";
@@ -21,7 +20,6 @@ export {
     hotelImage,
     guideImage,
     infoImage,
-    mapImage,
     travelImage,
     supplementsImage,
     VRImage,
