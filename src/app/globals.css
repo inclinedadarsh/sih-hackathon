@@ -78,4 +78,20 @@
         @apply box-border mx-auto;
         @apply w-[1100px] max-2xl:w-[1100px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-full px-5;
     }
+
+    tr:nth-of-type(even) {
+        @apply bg-blue-100;
+    }
+
+    tr:nth-of-type(odd) {
+        @apply bg-green-100;
+    }
+
+    .table {
+        @apply border-blue-100;
+    }
+
+    .cart tr:last-of-type {
+        @apply bg-blue-500 text-white;
+    }
 }
